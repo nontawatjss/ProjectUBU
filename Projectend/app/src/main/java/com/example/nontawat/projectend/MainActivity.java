@@ -16,17 +16,43 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         System.out.println("Test");
 
-        Button button = (Button)findViewById(R.id.button2);
+        Button BTlearn = (Button)findViewById(R.id.btlearn);
+        Button BTgame = (Button)findViewById(R.id.btgame);
+        Button BTscore = (Button)findViewById(R.id.btscore);
 
 
-
-        button.setOnClickListener(new View.OnClickListener() {
+        //LearnButton
+        BTlearn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("CLick");
+                System.out.println("CLick learn");
 
-                Intent myIntent = new Intent(MainActivity.this, Main2Activity.class);
-                myIntent.putExtra("key", "AA"); //Optional parameters
+                Intent myIntent = new Intent(MainActivity.this, learnpage.class);
+                myIntent.putExtra("key", "Learn"); //Optional parameters
+                startActivity(myIntent);
+            }
+        });
+
+        //GameButton
+        BTgame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("CLick game");
+
+                Intent myIntent = new Intent(MainActivity.this, examplepage.class);
+                myIntent.putExtra("key", "Game"); //Optional parameters
+                startActivity(myIntent);
+            }
+        });
+
+        //ScoreButton
+        BTscore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("CLick game");
+
+                Intent myIntent = new Intent(MainActivity.this, scorepage.class);
+                myIntent.putExtra("key", "Score"); //Optional parameters
                 startActivity(myIntent);
             }
         });
