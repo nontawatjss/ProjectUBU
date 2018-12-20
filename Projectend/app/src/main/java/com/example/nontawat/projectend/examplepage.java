@@ -14,6 +14,6 @@ public class examplepage extends AppCompatActivity {
         Intent intent = getIntent();
         String value = intent.getStringExtra("key"); //if it's a string you stored.
 
-        System.out.println(value);
+        System.out.println(value+"OKKKKK");
     }
 }
