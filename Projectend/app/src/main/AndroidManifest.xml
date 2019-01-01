@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".learnpage" />
         <activity android:name=".examplepage" />
-        <activity android:name=".scorepage"></activity>
+        <activity android:name=".scorepage" />
+        <activity android:name=".game001"></activity>
     </application>
 
 </manifest>
